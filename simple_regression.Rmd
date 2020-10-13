@@ -228,10 +228,10 @@ new_dat <- data.frame(
 
 ```{r}
 library(ciTools)
-pred <- add_pi(tb = new_dat,
+pred <- add_pi(df = new_dat,
                fit = ols1,
                alpha = 0.05)
-ci <- add_ci(tb = new_dat,
+ci <- add_ci(df = new_dat,
              fit = ols1,
              alpha = 0.05)
 ```
