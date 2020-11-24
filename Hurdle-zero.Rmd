@@ -176,6 +176,14 @@ nmes.hpoi <- hurdle(formula,
 
 ### ハードルポアソン回帰モデルの結果
 
+- `summary()`関数を利用して結果を確認する
+
+```{r}
+summary(nmes.hpoi)
+```
+
+### ハードルポアソン回帰モデルの結果
+
 - `jtools`パッケージではハードルモデルを扱えないため, `stargazer`パッケージを利用する
 
 ```{r}
@@ -214,6 +222,14 @@ nmes.hnb <- hurdle(formula,
                    data = NMES1988,
                    dist = "negbin", 
                    zero.dist = "binomial")
+```
+
+### ハードル負の二項分布モデルの結果
+
+- `summary()`関数を利用して結果を確認する
+
+```{r}
+summary(nmes.hnb)
 ```
 
 ### ハードル負の二項分布モデルの結果
@@ -258,6 +274,14 @@ nmes.zip <- zeroinfl(formula,
 
 ### ゼロ過剰ポアソン回帰モデルの結果
 
+- `summary()`関数を利用して結果を確認する
+
+```{r}
+summary(nmes.zip)
+```
+
+### ゼロ過剰ポアソン回帰モデルの結果
+
 ```{r}
 stargazer(nmes.zip, type = "text", style = "all2", ci = TRUE,
           star.cutoffs = NA, omit.table.layout = 'n',
@@ -291,6 +315,14 @@ NMES1988 %>%
 nmes.zinb <- zeroinfl(formula, 
                       data = NMES1988,
                       dist = "negbin")
+```
+
+### ゼロ過剰負の二項分布モデルの結果
+
+- `summary()`関数を利用して結果を確認する
+
+```{r}
+summary(nmes.zinb)
 ```
 
 ### ゼロ過剰負の二項分布モデルの結果
